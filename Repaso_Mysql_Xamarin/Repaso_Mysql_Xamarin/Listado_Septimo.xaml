@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Repaso_Mysql_Xamarin.Listado_Septimo">
+    <ContentPage.Content>
+
+
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Muestra de Listado Alumnos de 7mo Grado" HorizontalTextAlignment="Center" TextColor="White" FontSize="25"/>
+            </Frame>
+
+
+            <Label Text="Listado Alumnado 7mo Grado: "></Label>
+            <Entry x:Name="txtAnio"></Entry>
+
+
+            <Button Text="Generar" Clicked="Alumnos_Perfil"></Button>
+            <ListView x:Name="lstEstudent"  HasUnevenRows="true">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                           
+                                <Label Text="{Binding alumno_rne}" TextColor="Blue"></Label>
+                                
+                                <Label Text="{Binding alumno_nombre1}" TextColor="Blue"></Label>
+
+                                <Label Text="{Binding alumno_ape1}" TextColor="Blue"></Label>
+
+                                <Label Text="{Binding alumno_genero}" TextColor="Blue"></Label>
+
+                                <Label Text="{Binding grado_nombre}" TextColor="Blue"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+       
+  
+</ContentPage>
